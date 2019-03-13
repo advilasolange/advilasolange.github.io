@@ -7,6 +7,8 @@ var PORT = process.env.PORT || 3000;
 
 const app = express();
 
+//teste github
+
 //View engine setup
 app.engine('handlebars', exphbs());
 app.set('view engine', 'handlebars');
