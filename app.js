@@ -3,6 +3,7 @@ const bodyParser = require('body-parser');
 const exphbs = require('express-handlebars');
 const path = require('path');
 const nodemailer = require('nodemailer');
+var PORT = process.env.PORT || 3000;
 
 const app = express();
 
@@ -64,4 +65,4 @@ app.post('/sendMail', (req, res) => {
     });
 });
 
-app.listen(3000, () => console.log('Server started...'));
+app.listen(PORT, () => console.log('Server started...'));
