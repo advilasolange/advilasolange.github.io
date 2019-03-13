@@ -1,0 +1,17 @@
+{
+  "name": "membros",
+  "version": "1.0.0",
+  "description": "Confirmação de Presença de membros por email",
+  "main": "app.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "advs",
+  "license": "MIT",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.4",
+    "express-handlebars": "^3.0.2",
+    "nodemailer": "^5.1.1"
+  }
+}
