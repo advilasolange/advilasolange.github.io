@@ -5,9 +5,8 @@ const path = require('path');
 const nodemailer = require('nodemailer');
 var PORT = process.env.PORT || 3000;
 
-const app = express();
+const app = express(); 
 
-//teste github
 
 //View engine setup
 app.engine('handlebars', exphbs());
@@ -26,7 +25,7 @@ app.get('/', (req, res) => {
 
 app.post('/sendMail', (req, res) => {
     const output = `
-        <p>Presença confirmada</p>
+        <p>Data de envio: </p>
         <h3>Detalhes</h3>
         <ul>
             <li>Nome: ${req.body.nome}</li>
@@ -49,8 +48,11 @@ app.post('/sendMail', (req, res) => {
     // setup email data with unicode symbols
     let mailOptions = {
         from: '"ADM Vila Solange" <noreplay.advilasolange@gmail.com>', // sender address
-        to: 'levivirginio.silva@gmail.com, snzlary@gmail.com', // list of receivers
-        subject: 'Lista de Presença', // Subject line
+       // to: 'levivirginio.silva@gmail.com, snzlary@gmail.com', // list of receivers 
+          to: 'rafael_carvalho123@hotmail.com',
+          subject: 'Lista de Presença', 
+    
+       // subject: `${req.body.assunto}`, // Subject line  essa linha é quando eu tiver o campo assunto pronto, após pronto tirar o "subject"
         text: 'Reunião de Obreiros', // plain text body
         html: output // html body
     };
